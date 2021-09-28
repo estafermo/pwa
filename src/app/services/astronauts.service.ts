@@ -16,11 +16,7 @@ export class AstronautsService {
     
     
     getAll() {
-<<<<<<< HEAD
-       return this.http.get<any>('http://api.open-notify.org/astros.json');
-=======
        return this.http.get<any>('http://api.open-notify.org/astros.json', this.httpOptions);
->>>>>>> gh-pages
     }
  
 }
