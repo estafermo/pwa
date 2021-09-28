@@ -16,7 +16,7 @@ export class AstronautsService {
     
     
     getAll() {
-       return this.http.get<any>('http://api.open-notify.org/astros.json', this.httpOptions);
+       return this.http.get<any>('https://run.mocky.io/v3/9ac152ac-e5ef-484e-bae5-78c3557fa2df',);
     }
  
 }
