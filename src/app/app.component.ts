@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   
 
   constructor(private astronautsService: AstronautsService, private sw: UpdateService ){
+    console.log("Should check for updates:")
     this.sw.checkForUpdates();
 
   }

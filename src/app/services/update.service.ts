@@ -8,8 +8,9 @@ import { interval } from "rxjs";
 export class UpdateService {
 
     constructor(public updates: SwUpdate) {
+
       if (updates.isEnabled) {
-        interval(6 * 60 * 60).subscribe(() => updates.checkForUpdate()
+        interval(6000).subscribe(() => updates.checkForUpdate()
           .then(() => console.log('checking for updates')));
       }
     }
