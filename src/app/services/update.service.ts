@@ -8,14 +8,16 @@ import { interval } from "rxjs";
 export class UpdateService {
 
     constructor(public updates: SwUpdate) {
-
+      
       if (updates.isEnabled) {
-        interval(6000).subscribe(() => updates.checkForUpdate()
+        console.log("constructor");
+        interval(6 * 60 * 60).subscribe(() => updates.checkForUpdate() // 6000
           .then(() => console.log('checking for updates')));
       }
     }
   
     public checkForUpdates(): void {
+      console.log("method");
       this.updates.available.subscribe(event => this.promptUser());
     }
   
