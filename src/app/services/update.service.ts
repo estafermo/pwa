@@ -11,7 +11,7 @@ export class UpdateService {
       
       if (updates.isEnabled) {
         console.log("constructor");
-        interval(6000).subscribe(() => updates.checkForUpdate() // 6000 //6 * 60 * 60
+        interval(6 * 60 * 60).subscribe(() => updates.checkForUpdate() // 6000 //6 * 60 * 60
           .then(() => console.log('checking for updates')));
       }
     }
